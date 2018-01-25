@@ -44,6 +44,12 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 * 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
 
+##TRANSFORMATION
+From the data above, the data sets were :
+ * combined into a single data set
+ * filtered to only mean() and std() columns
+ * summarized by mean() for each variable 
+
 ##Notes: 
 ***
 - Features are normalized and bounded within [-1,1].
