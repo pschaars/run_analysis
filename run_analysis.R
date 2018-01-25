@@ -1,7 +1,7 @@
 library(data.table)
 library(tidyverse)
 
-setwd("./runAnalysis/")
+setwd("./runAnalysis/UCI HAR Dataset")
 
 #########################################################################
 ## Loading all the relevant text files: data and labels with fread()
@@ -37,3 +37,5 @@ rundata <- rundata %>%
 rundata_tidy <- rundata %>%
   group_by(Subject, Activity) %>%             
   summarize_all(mean)                         #summarizes all the columns by the grouping, applying mean()
+
+write.table(file="summary.txt", rundata_tidy, row.names = FALSE)
